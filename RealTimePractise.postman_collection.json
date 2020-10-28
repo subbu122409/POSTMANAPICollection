@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "236f39b6-b55f-45ad-807a-1045c3e69289",
+		"name": "RealTimePractise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GETAllUsers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "34eeeacb-520d-46e7-ad7c-cb13d2681708",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/users?{{page}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "{{page}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
